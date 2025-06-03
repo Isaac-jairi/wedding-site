@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
           
           <div className="mt-8 text-black/60">
-            <p>© 2025 Ana & João</p>
+            <p>© 2025 Lethicia & Isaac</p>
           </div>
         </motion.div>
       </div>
