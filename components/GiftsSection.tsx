@@ -3,8 +3,18 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import GiftCard from '@/components/GiftCard';
-import { Gift } from '@prisma/client';
 
+// Define the Gift type based on your Prisma schema
+export interface Gift {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  url: string;
+  isReserved: boolean;
+  reservedBy: string | null; // Nullable if not reserved
+}
 // Mock data - in a real application, this would come from Prisma DB
 const MOCK_GIFTS: Gift[] = [
   {
