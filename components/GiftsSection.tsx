@@ -97,7 +97,7 @@ export default function GiftsSection() {
     ));
     
     // Simulate API delay
-    return new Promise(resolve => setTimeout(resolve, 800));
+    return new Promise<void>(resolve => setTimeout(() => resolve(), 800));
   };
 
   return (
