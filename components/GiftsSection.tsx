@@ -22,7 +22,7 @@ const MOCK_GIFTS: Gift[] = [
     id: '1',
     name: 'Jogo de Copos',
     description: 'Conjunto decopos de alta qualidade para a nossa nova cozinha.',
-    price: 599.90,
+    price: 2.00,
     imageUrl: 'https://m.media-amazon.com/images/I/715hvgVy7jL.jpg',
    urlStripe: 'https://buy.stripe.com/9B6eVf0KCdcdgKtdegg7e00',
    urlPix: 'https://nubank.com.br/cobrar/1jehu0/6842609c-7961-4dba-94c1-e7ab625a197c',
