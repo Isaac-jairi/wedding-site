@@ -11,43 +11,12 @@ import { Gift } from './GiftsSection';
 
 interface GiftCardProps {
   gift: Gift;
-  onReserve: (id: string, name: string) => Promise<void>;
 }
 
-export default function GiftCard({ gift, onReserve }: GiftCardProps) {
+export default function GiftCard({ gift }: GiftCardProps) {
   const [open, setOpen] = useState(false);
-  const [reserveName, setReserveName] = useState('');
-  const [isReserving, setIsReserving] = useState(false);
 
-  const handleReserve = async () => {
-    if (!reserveName.trim()) {
-      toast({
-        title: "Nome obrigatório",
-        description: "Por favor, informe seu nome para reservar este presente.",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    setIsReserving(true);
-    try {
-      await onReserve(gift.id, reserveName);
-      setOpen(false);
-      toast({
-        title: "Presente reservado!",
-        description: "Obrigado por sua contribuição para nosso casamento."
-      });
-    } catch (error) {
-      toast({
-        title: "Erro ao reservar",
-        description: "Não foi possível reservar este presente. Tente novamente.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsReserving(false);
-    }
-  };
-
+  
   return (
     <>
       <motion.div
@@ -111,34 +80,28 @@ export default function GiftCard({ gift, onReserve }: GiftCardProps) {
               <p className="mb-4">{gift.description}</p>
               <p className="text-xl font-semibold mb-6">R$ {gift.price.toFixed(2)}</p>
               
-              {gift.url && (
+              {gift.urlStripe && (
                 <a 
-                  href={gift.url} 
+                  href={gift.urlStripe} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-blue-600 hover:underline block mb-6"
                 >
-                  Ver na loja
+                  Pagar com Cartão de Crédito
                 </a>
               )}
-              
-              {!gift.isReserved && (
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium">
-                      Seu nome
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      value={reserveName}
-                      onChange={(e) => setReserveName(e.target.value)}
-                      className="w-full p-2 border border-gray-300 rounded-md"
-                      placeholder="Digite seu nome para reservar"
-                    />
-                  </div>
-                </div>
+              {gift.urlPix && (
+                <a 
+                  href={gift.urlPix} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-600 hover:underline block mb-6"
+                >
+                  Pagar com Pix
+                </a>
               )}
+
+              
             </div>
           </div>
           
@@ -147,14 +110,7 @@ export default function GiftCard({ gift, onReserve }: GiftCardProps) {
               Fechar
             </Button>
             
-            {!gift.isReserved && (
-              <Button 
-                onClick={handleReserve} 
-                disabled={isReserving}
-              >
-                {isReserving ? 'Reservando...' : 'Reservar Presente'}
-              </Button>
-            )}
+            
           </DialogFooter>
         </DialogContent>
       </Dialog>
