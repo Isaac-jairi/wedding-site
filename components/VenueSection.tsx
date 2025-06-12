@@ -20,7 +20,7 @@ export default function VenueSection() {
           </p>
         </motion.div>
 
-        <Card className="overflow-hidden border-none shadow-xl">
+        <Card className="overflow-hidden border-none shadow-xl [box-shadow:0_-4px_6px_-1px_rgba(0,0,0,0.1),0_4px_6px_-1px_rgba(0,0,0,0.1)]">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2 gap-0">
               <motion.div

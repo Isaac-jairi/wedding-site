@@ -45,6 +45,12 @@ jobs:
           node-version: "lts/*"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
+
+      - name: Add Environment Variables
+        env:
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+        run: echo "Environment variables configured."
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
