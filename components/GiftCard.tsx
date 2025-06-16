@@ -44,13 +44,14 @@ export default function GiftCard({ gift }: GiftCardProps) {
           transition={{ duration: 0.5 }}
         >
           <Card className="gift-card h-full cursor-pointer overflow-hidden [box-shadow:0_-4px_6px_-1px_rgba(0,0,0,0.1),0_4px_6px_-1px_rgba(0,0,0,0.1)]">
-            <CardContent className="p-0 h-full flex flex-col">
-              <div className="relative w-full h-48">
+            <CardContent className=" h-full flex flex-col p-2">
+              <div className="relative w-full h-48 rounded-md">
                 <Image
                   src={gift.imageUrl}
                   alt={gift.name}
                   fill
-                  className="object-cover"
+                  className="rounded-md object-cover"
+                  quality={90} 
                 />
                 {gift.isReserved && (
                   <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
@@ -60,12 +61,12 @@ export default function GiftCard({ gift }: GiftCardProps) {
                   </div>
                 )}
               </div>
-              <div className="p-4 flex-1 flex flex-col">
-                <h3 className="text-xl font-medium">{gift.name}</h3>
-                <p className="text-muted-foreground line-clamp-2 mt-1 mb-2 flex-1">
+              <div className="flex p-4 flex-1 flex-col">
+                <h3 className="text-2xl font-semibold">{gift.name}</h3>
+                {/* <p className="text-muted-foreground line-clamp-2 mt-1 mb-2 flex-1">
                   {gift.description}
-                </p>
-                <p className="font-semibold">
+                </p> */}
+                <p className="font-semibold text-md self-end">
                   R$ {gift.price.toFixed(2)}
                 </p>
               </div>
@@ -88,18 +89,18 @@ export default function GiftCard({ gift }: GiftCardProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative h-64 md:h-full rounded-md overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[300px]">
+          <div className="relative md:h-full rounded-md overflow-hidden">
             <Image
               src={gift.imageUrl}
               alt={gift.name}
               fill
-              className="object-cover"
+              className="object-contain rounded-md"
             />
           </div>
-          <div>
-            <p className="mb-4">{gift.description}</p>
-            <p className="text-xl font-semibold mb-6">
+          <div className="flex-col bg-gray-100 rounded-md p-3">
+            <p className="mb-4 ">{gift.description}</p>
+            <p className="text-xl font-semibold mb-6 justify-self-end">
               R$ {gift.price.toFixed(2)}
             </p>
             {gift.urlStripe && (
@@ -107,7 +108,7 @@ export default function GiftCard({ gift }: GiftCardProps) {
                 href={gift.urlStripe}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline block mb-4"
+                className="text-blue-600 hover:underline block mb-4 justify-self-end"
               >
                 Presentear com Cartão
               </a>
@@ -117,7 +118,7 @@ export default function GiftCard({ gift }: GiftCardProps) {
                 href={gift.urlPix}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-600 hover:underline block"
+                className="text-green-600 hover:underline block justify-self-end"
               >
                 Presentear com Pix
               </a>
