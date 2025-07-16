@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+  dancing: ['var(--font-dancing-script)'],
+  playfair: ['var(--font-playfair)'],
+  cormorant: ['var(--font-cormorant)'],
+  tangerine: ['var(--font-tangerine)'],
+},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

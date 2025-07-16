@@ -33,7 +33,7 @@ export default function GiftsSection() {
   }
 
   return (
-    <section id="gifts" className="py-16">
+    <section id="gifts" className="py-36">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -42,10 +42,10 @@ export default function GiftsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl md:text-5xl mb-4">Lista de Presentes</h2>
+          <h2 className="text-xl md:text-6xl mb-4 font-tangerine">Lista de Presentes</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Sua presença é nosso maior presente, mas se desejar nos presentear,
-            selecionamos algumas opções para o início de nossa vida a dois.
+            selecionamos algumas opções para o início da nossa vida a dois.
           </p>
         </motion.div>
 

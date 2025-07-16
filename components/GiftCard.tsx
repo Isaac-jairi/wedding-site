@@ -62,7 +62,7 @@ export default function GiftCard({ gift }: GiftCardProps) {
                 )}
               </div>
               <div className="flex p-4 flex-1 flex-col">
-                <h3 className="text-2xl font-semibold">{gift.name}</h3>
+                <h3 className="text-2xl font-cormorant">{gift.name}</h3>
                 {/* <p className="text-muted-foreground line-clamp-2 mt-1 mb-2 flex-1">
                   {gift.description}
                 </p> */}

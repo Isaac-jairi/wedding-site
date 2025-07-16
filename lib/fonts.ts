@@ -1,4 +1,4 @@
-import { Dancing_Script, Playfair_Display, Cormorant_Garamond } from 'next/font/google';
+import { Dancing_Script, Playfair_Display, Cormorant_Garamond, Tangerine } from 'next/font/google';
 
 export const dancingScript = Dancing_Script({ 
   subsets: ['latin'],
@@ -17,4 +17,12 @@ export const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-cormorant',
+});
+
+
+export const tangerine = Tangerine({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-tangerine', // necessário se for usar com Tailwind
 });

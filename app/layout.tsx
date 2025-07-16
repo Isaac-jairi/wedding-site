@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { dancingScript, playfairDisplay, cormorantGaramond } from '@/lib/fonts';
+import { dancingScript, playfairDisplay, cormorantGaramond, tangerine} from '@/lib/fonts';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html 
       lang="pt-BR"
-      className={`${dancingScript.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable}`}
+      className={`${dancingScript.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} ${tangerine.variable}`}
     >
       <body>
         {children}

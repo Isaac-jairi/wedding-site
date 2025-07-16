@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function VenueSection() {
   return (
-    <section id="venue" className="venue-section">
+    <section id="venue" className=" py-16">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -14,9 +14,9 @@ export default function VenueSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl md:text-5xl mb-4">O Local</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Este é o local onde celebraremos nosso amor e união
+          <h2 className="text-4xl md:text-6xl mb-4 font-tangerine">O Local</h2>
+          <p className="text-lg md:text-xl  max-w-2xl mx-auto  font-cormorant">
+            Este é o local onde celebraremos nosso amor e união!
           </p>
         </motion.div>
 
@@ -45,12 +45,12 @@ export default function VenueSection() {
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="p-8 flex flex-col justify-center"
               >
-                <h3 className="text-3xl mb-4">Casa das Pedras</h3>
-                <p className="mb-2 text-lg">
+                <h3 className="text-4xl md:text-5xl mb-4 font-tangerine">Casa das Pedras</h3>
+                <p className="text-md  max-w-2xl font-cormorant">
                   Av. Cerrados, 9 – Vinte e Três de Setembro
                 </p>
-                <p className="mb-2 text-lg">Várzea Grande – MT</p>
-                <p className="text-lg">CEP: 78115-851</p>
+                <p className="text-md  max-w-2xl font-cormorant">Várzea Grande – MT</p>
+                <p className="text-md   max-w-2xl font-cormorant">CEP: 78115-851</p>
               </motion.div>
             </div>
           </CardContent>

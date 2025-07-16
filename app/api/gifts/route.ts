@@ -51,22 +51,28 @@ export async function GET() {
     }
 
     // 4) Monta o array de gifts usando metadata e o linkMap
-    const gifts: Gift[] = prices.data.map((price) => {
-      const product = price.product as Stripe.Product;
-      const metadata = product.metadata || {};
+    const gifts: Gift[] = prices.data
+  .filter((price) => {
+    const product = price.product as Stripe.Product;
+    return product.active; 
+  })
+  .map((price) => {
+    const product = price.product as Stripe.Product;
+    const metadata = product.metadata || {};
 
-      return {
-        id: price.id,
-        name: product.name,
-        description: product.description ?? '',
-        price: (price.unit_amount ?? 0) / 100,
-        imageUrl: product.images[0] ?? '',
-        urlStripe: metadata.urlStripe || linkMap[price.id] || '',
-        urlPix: metadata.urlPix || '',
-        isReserved: false,
-        reservedBy: null,
-      };
-    });
+    return {
+      id: price.id,
+      name: product.name,
+      description: product.description ?? '',
+      price: (price.unit_amount ?? 0) / 100,
+      imageUrl: product.images[0] ?? '',
+      urlStripe: metadata.urlStripe || linkMap[price.id] || '',
+      urlPix: metadata.urlPix || '',
+      isReserved: false,
+      reservedBy: null,
+    };
+  });
+     
 
     return NextResponse.json(gifts);
   } catch (err) {
