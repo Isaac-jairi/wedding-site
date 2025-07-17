@@ -12,7 +12,7 @@ export default function Home() {
       <HeroSection />
       <Countdown />
       <WelcomeSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <VenueSection />
       <GiftsSection />
       <Footer />
