@@ -34,7 +34,7 @@ export default function WelcomeSection() {
               >
                 <div className="rounded-xl overflow-hidden max-w-md w-lg h-auto">
                   <Image
-                    src="/Noivado2.jpeg"
+                    src="/Noivado.jpeg"
                     alt="Foto do Noivado"
                     width={500}
                     height={300}
