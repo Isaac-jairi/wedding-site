@@ -56,6 +56,11 @@ export async function GET() {
     const product = price.product as Stripe.Product;
     return product.active; 
   })
+  .sort((a, b) => {
+    const createdA = (a.product as Stripe.Product).created || 0;
+    const createdB = (b.product as Stripe.Product).created || 0;
+    return createdA - createdB;
+  })
   .map((price) => {
     const product = price.product as Stripe.Product;
     const metadata = product.metadata || {};

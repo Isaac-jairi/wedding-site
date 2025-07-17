@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function VenueSection() {
   return (
     <section id="venue" className=" py-16">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}

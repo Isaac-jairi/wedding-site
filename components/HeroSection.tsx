@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section id="home" className="hero-section">
       <div 
         className="hero-background" 
-        style={{ backgroundImage: 'url("https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1600")' }}
+        style={{ backgroundImage: "url('/campo2.jpg')", }}
       />
       <motion.div 
         className="hero-content"

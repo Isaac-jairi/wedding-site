@@ -14,7 +14,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className=" md:text-6xl mb-4 font-tangerine">Lethicia & Isaac</h2>
+          <h2 className="text-6xl md:text-6xl mb-4 font-tangerine">Lethicia & Isaac</h2>
           <div className="flex justify-center items-center gap-2 mb-8">
             <div className="h-[1px] w-12 bg-black/60"></div>
             <Heart className="h-6 w-6" />
