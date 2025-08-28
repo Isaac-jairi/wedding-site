@@ -62,7 +62,7 @@ export default function WelcomeSection() {
                     Cheguem às 15h para se acomodarem e tirarem muitas fotos, pois a partir das 15h30 daremos início à cerimônia! Seremos pontuais!
                     <br/>
                     <br/>
-                    Com muito carinho, informamos que as cores destinadas aos trajes dos padrinhos, pajens e da florista serão champanhe, amarelo claro  e tons de rosa. Assim, gentilmente pedimos que essas cores sejam evitadas pelos demais convidados, a fim de mantermos a harmonia visual da cerimônia.
+                    Com muito carinho, informamos que as cores destinadas aos trajes dos padrinhos, pajens e pais dos noivos serão champanhe, amarelo claro, tons de rosa, azul marinho e terracota. Assim, gentilmente pedimos que essas cores sejam evitadas pelos demais convidados, a fim de mantermos a harmonia visual da cerimônia.
                     <br/>
                     <br/>
                     Como o casamento acontecerá no meio da tarde, sugerimos que optem por cores vivas e alegres, que combinem com o clima leve e festivo desse momento tão especial!
